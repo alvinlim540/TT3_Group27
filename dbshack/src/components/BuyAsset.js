@@ -1,8 +1,8 @@
-import { useState } from "react";
-import Button from "./Button";
+import { useState } from "react"
+import Button from "./Button"
 
 const BuyAsset = ({ onBuy }) => {
-  const [amount, orderType, setAmount] = useState("");
+  const [amount, orderType, setAmount] = useState('')
 
   //Buy Asset
   const buyAsset = async ({ amount }) => {
@@ -63,7 +63,7 @@ const BuyAsset = ({ onBuy }) => {
 
     onBuy({ amount });
 
-    setAmount("");
+    setAmount('');
   };
 
   return (
@@ -72,27 +72,23 @@ const BuyAsset = ({ onBuy }) => {
       <div className="form-control">
         <label>Asset Amount</label>
         <input
-        className="input"
-          type="text"
-          placeholder="e.g. 10.00"
-          value={amount}
-        //   onChange={(e) => setAmount(e.target.value)}
+            className="input"
+            type="text"
+            placeholder="e.g. 10.00"
+            // value={amount}
+            // onChange={(e) => setAmount(e.target.value)}
         />
-
-        {/* <select className="dropdown">
-            <option className="dropdown-content" value="BUY">Buy</option>
-            <option className="dropdown-content" value="SELL">Sell</option>
-        </select> */}
 
         <input 
             className="input"
             type="text"
             placeholder="BUY or SELL"
-            value={orderType}
+            // value={orderType}
+            // onChange={(e) => orderType(e.target.value)}
         />
 
         <Button text="Submit" onClick={
-            "Hi"
+            ""
             //Condition to detect if option is BUY or SELL,
             //then call buyAsset or sellAsset accordingly
         } />
