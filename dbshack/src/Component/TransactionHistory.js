@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { TransactionTable } from "./TransactionTable";
-import SubmitButton from "./submitButton";
+
 
 class TransactionHistory extends Component {
 	constructor(props) {
 		super(props);
-
 		this.state = {
 			items: [],
 			isLoaded: false,
@@ -23,7 +22,7 @@ class TransactionHistory extends Component {
 	}
 
 	componentDidMount() {
-		
+		this.getTransactionHistory();
 	}
 
 	async getTransactionHistory() {
@@ -45,6 +44,11 @@ class TransactionHistory extends Component {
 
 		axios(config)
 			.then((response) => {
+				this.setState({
+					isLoaded: true,
+					items: response.data, // get data in json
+				});
+
 				console.log(response.data);
 				return response.data;
 				
@@ -55,24 +59,15 @@ class TransactionHistory extends Component {
 		
 	}
 
-	submitHandler = (e) => {
-		e.preventDefault();
-		console.log(this.state);
-		// Need to do a post request.
-	};
+
 
 	render() {
+		var {  items } = this.state;
 		return (
-			var { isLoaded, items } = this.state;
-
 			<div>
-				TransactionHistory
-				<SubmitButton
-					text="Click me for transaction history"
-					disabled={this.state.buttonDisabled}
-					onClick={() => this.getTransactionHistory()}
-				/>
-				<TransactionTable></TransactionTable>
+				Transaction History Page
+				
+				<TransactionTable items={ items} ></TransactionTable> 
 			</div>
 		);
 	}
