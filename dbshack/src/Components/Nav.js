@@ -22,6 +22,9 @@ function Nav() {
         <Link style={navStyle} to="/BuySellAsset">
           <li>Buy/Sell Asset</li>
         </Link>
+        <Link style={navStyle} to="/">
+          <li>View Asset</li>
+        </Link>
       </ul>
     </nav>
   );
