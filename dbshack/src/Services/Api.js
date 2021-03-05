@@ -1,5 +1,6 @@
-export default function GetUserAsset() {
-  var axios = require("axios");
+var axios = require("axios");
+
+export async function GetUserAsset() {
   var data = JSON.stringify({
     accountKey: "8ee1f2c6-ef52-4a6e-ae4c-1dbc5b6f0924",
   });
@@ -15,11 +16,14 @@ export default function GetUserAsset() {
     data: data,
   };
 
+  let data;
   axios(config)
     .then(function (response) {
       console.log(JSON.stringify(response.data));
+      data = response.data;
     })
     .catch(function (error) {
       console.log(error);
     });
+  return data;
 }
