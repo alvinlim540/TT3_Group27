@@ -1,0 +1,37 @@
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    overflow: auto;
+    min-height: 300px;
+    border: 1px solid #161717;
+    padding: 30px;
+    border-radius: 5px;
+  }
+
+  .input {
+      padding: 8px 20px;
+      margin: 10px;
+  }
+
+  .btn {
+    display: inline-block;
+    background: #C01125;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+  }
+
+  .dropdown {
+      padding: 8px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 15px;
+  }

@@ -62,25 +62,32 @@ const BuyAsset = ({ onBuy }) => {
   };
 
   return (
-    <form className="buy-form" onSubmit={onSubmit}>
+    <div className="container">
+        <form className="buy-form" onSubmit={onSubmit}>
       <div className="form-control">
         <label>Asset Amount</label>
         <input
+        className="input"
           type="text"
-          placeholder="Enter amount to purchase"
+          placeholder="e.g. 10.00"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
         />
 
-        <select>
-            <option value="BUY">Buy</option>
-            <option value="SELL">Sell</option>
+        <select className="dropdown">
+            <option className="dropdown-content" value="BUY">Buy</option>
+            <option className="dropdown-content" value="SELL">Sell</option>
         </select>
 
-        <Button text="Submit" onClick={buyAsset} />
+        <Button text="Submit" onClick={
+            "Hi"
+            //Condition to detect if option is BUY or SELL,
+            //then call buyAsset or sellAsset accordingly
+        } />
 
       </div>
     </form>
+    </div>
   );
 };
 
