@@ -21,6 +21,7 @@ export async function GetUserAsset() {
     .then(function (response) {
       console.log(JSON.stringify(response.data));
       data = response.data;
+      console.log(data);
     })
     .catch(function (error) {
       console.log(error);
