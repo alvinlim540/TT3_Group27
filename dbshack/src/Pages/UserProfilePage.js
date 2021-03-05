@@ -5,6 +5,7 @@ class UserProfilePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      UserProfile: []
     };
   }
 
@@ -17,5 +18,6 @@ class UserProfilePage extends Component {
     );
   }
 }
+
 
 export default UserProfilePage;
