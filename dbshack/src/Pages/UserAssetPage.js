@@ -10,7 +10,7 @@ class UserAssetPage extends Component {
   render() {
     return (
       <div>
-        <h1>{this.state.userid}</h1>
+        <h1>Your current asset</h1>
         <Table />
       </div>
     );
