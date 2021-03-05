@@ -27,4 +27,34 @@ export async function GetUserAsset() {
       console.log(error);
     });
   return result;
+
+}
+
+
+export async function GetUserProfile() {
+  var userinfo = {
+    method: 'post',
+    url: 'https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/login',
+    headers: {
+      'x-api-key': 'vSxwt0bA4J2JMaIfDOrAZ7YUykHi7v64lBhi1Eug',
+      'Content-Type': 'application/json'
+    },
+    // data : data
+    };
+
+  await axios(userinfo)
+  .then((response) => {
+      this.setState({
+        isLoaded: true,
+        result : response.data,
+      });
+
+    console.log(response.data);
+    return response.data;
+
+    })
+
+   .catch((error) => {
+    console.log(error);
+  });
 }

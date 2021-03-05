@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Table from "../Components/Table";
+
 
 class UserAssetPage extends Component {
   constructor(props) {
@@ -11,7 +11,6 @@ class UserAssetPage extends Component {
     return (
       <div>
         <h1>{this.state.userid}</h1>
-        <Table />
       </div>
     );
   }
