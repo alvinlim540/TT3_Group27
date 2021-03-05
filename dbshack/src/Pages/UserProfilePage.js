@@ -12,7 +12,7 @@ class UserProfilePage extends Component {
     return (
       <div>
         <h1>{this.state.GetUserProfile()}</h1>
-        <h2>{this.state.}</h2>
+        <h2>{this.state.response.data}</h2>
       </div>
     );
   }
