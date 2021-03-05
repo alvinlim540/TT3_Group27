@@ -15,6 +15,7 @@ const BuyAsset = ({ onBuy }) => {
           "x-api-key": "vSxwt0bA4J2JMaIfDOrAZ7YUykHi7v64lBhi1Eug",
         },
         body: {
+            "accountKey": "8ee1f2c6-ef52-4a6e-ae4c-1dbc5b6f0924",
             "orderType": "BUY",
             "assetAmount": amount,
         }
@@ -37,6 +38,7 @@ const BuyAsset = ({ onBuy }) => {
           "x-api-key": "vSxwt0bA4J2JMaIfDOrAZ7YUykHi7v64lBhi1Eug",
         },
         body: {
+            "accountKey": "8ee1f2c6-ef52-4a6e-ae4c-1dbc5b6f0924",
             "orderType": "SELL",
             "assetAmount": amount,
         }
