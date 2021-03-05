@@ -34,6 +34,7 @@ export async function GetUserAsset() {
 export async function GetUserProfile() {
   var userinfo = {
     method: 'post',
+    mode: "no-cors", // cross origin resource sharing
     url: 'https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/login',
     headers: {
       'x-api-key': 'vSxwt0bA4J2JMaIfDOrAZ7YUykHi7v64lBhi1Eug',
@@ -46,9 +47,9 @@ export async function GetUserProfile() {
   .then((response) => {
       this.setState({
         isLoaded: true,
-        result : response.data,
+        result = response.data,
       });
-
+    console.log(response);
     console.log(response.data);
     return response.data;
 
