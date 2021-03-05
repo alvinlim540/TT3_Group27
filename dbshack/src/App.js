@@ -1,9 +1,10 @@
+import TransactionHistory from "./Component/TransactionHistory";
 
 
 function App() {
   return (
     <div className="App">
-      hello
+      <TransactionHistory />
     </div>
   );
 }
