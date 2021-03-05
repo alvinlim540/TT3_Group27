@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "./Button";
 
 const BuyAsset = ({ onBuy }) => {
-  const [amount, setAmount] = useState("");
+  const [amount, orderType, setAmount] = useState("");
 
   //Buy Asset
   const buyAsset = async ({ amount }) => {
@@ -56,6 +56,11 @@ const BuyAsset = ({ onBuy }) => {
       return;
     }
 
+    if (!orderType) {
+        alert("Please specify BUY or SELL.");
+        return;
+    }
+
     onBuy({ amount });
 
     setAmount("");
@@ -71,13 +76,20 @@ const BuyAsset = ({ onBuy }) => {
           type="text"
           placeholder="e.g. 10.00"
           value={amount}
-          onChange={(e) => setAmount(e.target.value)}
+        //   onChange={(e) => setAmount(e.target.value)}
         />
 
-        <select className="dropdown">
+        {/* <select className="dropdown">
             <option className="dropdown-content" value="BUY">Buy</option>
             <option className="dropdown-content" value="SELL">Sell</option>
-        </select>
+        </select> */}
+
+        <input 
+            className="input"
+            type="text"
+            placeholder="BUY or SELL"
+            value={orderType}
+        />
 
         <Button text="Submit" onClick={
             "Hi"
