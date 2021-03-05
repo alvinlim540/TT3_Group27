@@ -4,9 +4,7 @@ import Table from "../Components/Table";
 class UserAssetPage extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-
-    };
+    this.state = {};
   }
 
   render() {
@@ -19,4 +17,4 @@ class UserAssetPage extends Component {
   }
 }
 
-export default HomePage;
+export default UserAssetPage;

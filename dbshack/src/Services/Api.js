@@ -16,15 +16,15 @@ export async function GetUserAsset() {
     data: data,
   };
 
-  let data;
-  axios(config)
+  var result;
+  await axios(config)
     .then(function (response) {
-      console.log(JSON.stringify(response.data));
-      data = response.data;
-      console.log(data);
+      //console.log(JSON.stringify(response.data));
+      result = response.data;
+      console.log(result);
     })
     .catch(function (error) {
       console.log(error);
     });
-  return data;
+  return result;
 }
